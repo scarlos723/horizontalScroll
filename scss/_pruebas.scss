@@ -1,0 +1,64 @@
+body {
+    margin: 0;
+    padding: 0;
+   }
+   
+   
+
+   
+   .slide {
+    display: flex;
+    width: 100%;
+    min-height: 100%; 
+    align-content: center;
+    justify-content: center;
+    //transform: rotate(90deg) translateY(-100vh);
+    //transform-origin: top left;
+    
+   }
+
+   .content{
+     
+     
+     max-height: 50%;
+     
+     transform: rotate(90deg) translateX(25%);
+     transform-origin: top left;
+    transform-origin: center; 
+    background-color: khaki ;
+   }
+   
+    .one {
+        background-color: rgb(150, 50, 100);
+    }
+    
+    .two {
+        background-color: rgb(150, 150, 100);
+    }
+    
+    .three {
+        background-color: rgb(50, 150, 100);
+    }
+   
+   .outer-wrapper {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+
+    height: 100vw;
+    width: 100vh;
+    transform: rotate(-90deg) translateX(-100vh);
+    transform-origin: top left;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    position: absolute;
+    -ms-overflow-style: none;
+    background-color: gray;
+   }
+
+  
+   
+   ::-webkit-scrollbar {
+    display: none; //ocultar las barras de scroll
+
+   }
