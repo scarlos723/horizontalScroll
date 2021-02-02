@@ -1,11 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&family=Roboto+Slab:wght@400;700&family=Roboto:wght@400;500;900&display=swap");
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  font-family: 'Roboto Mono',monospace; }
 
-header {
-  background-color: blueviolet;
-  width: 100%; }
+a {
+  text-decoration: none;
+  color: #30361f;
+  margin-left: 10px;
+  color: #85c9ad; }
 
 .container {
   display: flex;
@@ -13,25 +17,207 @@ header {
   position: fixed;
   top: 0;
   left: 0;
-  width: 400%;
-  height: 100vh;
-  background-color: gray; }
+  width: 500%;
+  height: 100vh; }
 
 .page-slide {
   display: grid;
   position: relative;
+  grid-template-rows: 1fr 2fr 3fr;
   width: 100%;
   height: 100%;
-  background-color: #303444;
+  background-color: #edf4ff;
   justify-content: center;
   align-items: center; }
+  .page-slide .header-slide {
+    display: flex;
+    height: 100%;
+    grid-row: 1;
+    padding: 0 100px;
+    align-items: center;
+    justify-content: space-between;
+    color: #30361f; }
+    .page-slide .header-slide h3 {
+      font-size: 24px; }
+    .page-slide .header-slide nav {
+      font-size: 18px; }
+  .page-slide .content-title {
+    padding: 0 100px;
+    grid-row: 2;
+    color: #30361f;
+    font-size: 30px; }
+  .page-slide .content-slide {
+    grid-row: 3;
+    padding: 0 100px;
+    height: 100%;
+    width: 70%;
+    color: #30361f; }
+    .page-slide .content-slide p {
+      padding: 20px 0;
+      font-size: 18px; }
 
-.content-slide {
-  padding: 100px;
-  color: white; }
+.page-education {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  width: 100%;
+  height: 100%;
+  color: #30361f; }
+  .page-education .content-uni {
+    grid-row: 1;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    margin: 50px;
+    padding: 0 100px; }
+    .page-education .content-uni .img-box {
+      grid-column: 1;
+      height: 400px;
+      display: flex;
+      box-shadow: 0 0 5px 10px #85c9ad;
+      background-color: #85c9ad;
+      opacity: 0.8;
+      border-radius: 10px;
+      align-items: center;
+      justify-content: center; }
+      .page-education .content-uni .img-box img {
+        height: 80%;
+        padding: 20px;
+        border-radius: 30px; }
+    .page-education .content-uni .text-box {
+      grid-column: 2;
+      display: flex;
+      flex-direction: column;
+      margin-left: 50px;
+      justify-content: center; }
+      .page-education .content-uni .text-box h3 {
+        font-size: 48px; }
+      .page-education .content-uni .text-box p {
+        font-size: 18px; }
+  .page-education .content-course {
+    grid-row: 2;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    margin: 50px;
+    padding: 0 100px; }
+    .page-education .content-course .img-box {
+      grid-column: 2;
+      display: flex;
+      box-shadow: 0 0 5px 10px #85c9ad;
+      background-color: #85c9ad;
+      opacity: 0.8;
+      border-radius: 10px;
+      height: 400px;
+      align-items: center;
+      justify-content: center; }
+      .page-education .content-course .img-box img {
+        height: 80%;
+        padding: 20px;
+        border-radius: 30px; }
+    .page-education .content-course .text-box {
+      grid-row: 1;
+      display: flex;
+      flex-direction: column;
+      margin-right: 50px;
+      text-align: right;
+      justify-content: center; }
+      .page-education .content-course .text-box h3 {
+        font-size: 48px; }
+      .page-education .content-course .text-box p {
+        font-size: 18px; }
+
+.page-skills {
+  display: flex;
+  flex-flow: row nowrap;
+  width: 100%;
+  height: 100%; }
+  .page-skills .content-skill {
+    display: flex;
+    flex-direction: column;
+    margin: 50px;
+    width: 100%;
+    align-items: center;
+    border-radius: 20px;
+    background-color: #f1f1f1; }
+    .page-skills .content-skill .text-skill {
+      height: 100%;
+      display: flex;
+      text-align: center;
+      flex-direction: column; }
+    .page-skills .content-skill svg {
+      height: 40%;
+      width: 40%;
+      fill: #85c9ad; }
+    .page-skills .content-skill h3 {
+      font-size: 24px;
+      margin: 20px 0; }
+    .page-skills .content-skill h4 {
+      color: #85c9ad;
+      font-size: 24px;
+      margin: 20px 0; }
+    .page-skills .content-skill p {
+      font-size: 18px; }
+
+.page-works {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center; }
+
+.page-contact {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  background-color: #e7d6cc;
+  align-items: center;
+  justify-content: center; }
+  .page-contact h3 {
+    font-size: 30px; }
+  .page-contact p {
+    font-size: 24px;
+    margin: 20px 0;
+    text-align: center; }
+  .page-contact h6 {
+    font-size: 18px; }
+  .page-contact .content-contact {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height: 100%;
+    align-items: center;
+    justify-content: center; }
 
 @media only screen and (max-width: 1024px) {
   .page-slide {
-    background-color: burlywood; } }
+    background-color: burlywood; }
+    .page-slide .header-slide {
+      padding: 0 20px; }
+      .page-slide .header-slide h3 {
+        font-size: 18px; }
+      .page-slide .header-slide nav {
+        font-size: 14px; }
+    .page-slide .content-title {
+      padding: 0 20px;
+      font-size: 24px; }
+    .page-slide .content-slide {
+      padding: 0 20px; }
+      .page-slide .content-slide p {
+        padding: 20px 0;
+        font-size: 14px; } }
+@media only screen and (max-width: 812px) {
+  .page-slide {
+    background-color: paleturquoise; }
+    .page-slide .header-slide {
+      flex-direction: column;
+      padding: 10px 0; }
+      .page-slide .header-slide h3 {
+        font-size: 18px; }
+      .page-slide .header-slide nav {
+        font-size: 14px; }
+    .page-slide .content-title {
+      font-size: 24px; }
+    .page-slide .content-slide p {
+      padding: 20px 0;
+      font-size: 14px; } }
 
 /*# sourceMappingURL=styles.css.map */

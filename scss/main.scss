@@ -1,17 +1,19 @@
-
+@import "fonts";
+@import "variables";
 * {
         margin: 0;
         padding: 0;
         box-sizing: border-box; 
+        font-family: 'Roboto Mono',monospace;
     }
 
-header{
-    
-    background-color: blueviolet;
-    width: 100%;
-    
-    
+a{
+    text-decoration: none;
+    color: $fontCustomColor;
+    margin-left: 10px;
+    color: $customColor;
 }
+
 
 .container{
     display: flex;
@@ -19,33 +21,326 @@ header{
     position:fixed; //no se peude ahcer scroll
     top: 0;
     left: 0;
-    width: 400%;
+    width: 100% * $numPages;
     height: 100vh;
-    background-color: gray;
 }
 .page-slide{
     display: grid;
     position: relative;
-    
+    grid-template-rows: 1fr 2fr 3fr;
+
     width: 100%;
     height: 100%;
-    background-color: rgb(48, 52, 68);
+    background-color: $bgCustomColor;
     justify-content: center;
     align-items: center;
 
+    .header-slide{
+        display: flex;
+        
+        height: 100%;
+        grid-row: 1;
+        padding: 0 100px;
+        align-items: center;
+        justify-content: space-between;
+
+        color: $fontCustomColor;
+        h3{
+            font-size: map-get($fs, normal );
+            
+        }
+        nav{
+            font-size: map-get($fs, small );            
+        }
+    }
+    .content-title{
+        padding: 0 100px;
+        grid-row: 2;
+        color: $fontCustomColor;
+        font-size: map-get($fs, large );
+    }
+    .content-slide{
+        grid-row: 3;
+        padding: 0 100px;
+        height: 100%;
+        width: 70%;
+        color: $fontCustomColor; 
+     p{
+         padding: 20px 0;
+         font-size: map-get($fs, small );
+     }
+    }  
+
 }
-.content-slide{
- padding: 100px;
- color: white; 
-}    
+
+.page-education{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    width: 100%;
+    height: 100%;
+    color: $fontCustomColor;
+    .content-uni{
+        grid-row: 1;
+        
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        margin: 50px;   
+       
+
+        padding: 0 100px;
+
+    .img-box{
+        grid-column:1;
+
+        height: 400px;
+        display: flex;
+        box-shadow: 0 0 5px 10px $customColor;
+        background-color: $customColor;
+        opacity: 0.8;
+        border-radius: $rad-img-box;
+        align-items: center;
+        justify-content: center;
+        
+        img{
+            
+            
+            height:80%;
+            padding: 20px;
+            border-radius: $rad-img;
+        }
+        
+    }
+    .text-box{
+        grid-column: 2;
+
+        display: flex;
+        flex-direction: column;
+        margin-left: 50px;
+        
+        justify-content: center;
+        h3{
+            font-size: map-get($fs, x-large);
+        }
+        p{
+            font-size: map-get($fs, small);
+        }
+        
+    }
+
+    }
 
 
+
+    .content-course{
+        grid-row: 2;
+        
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        margin: 50px;
+
+        padding: 0 100px;
+
+       
+
+        .img-box{
+            grid-column:2;
+
+            display: flex;
+            box-shadow: 0 0 5px 10px $customColor;
+            background-color: $customColor;
+            opacity: 0.8;
+            border-radius: $rad-img-box;
+            height: 400px;
+            align-items: center;
+            justify-content: center;
+            img{
+                height: 80%;
+                padding: 20px;
+                border-radius: $rad-img;
+            }
+        }
+        .text-box{
+            grid-row:1;
+            
+            display: flex;
+            flex-direction: column;
+
+
+            margin-right: 50px;
+            
+            text-align: right;
+            justify-content: center;
+
+            h3{
+                font-size: map-get($fs, x-large);
+            }
+            p{
+                font-size: map-get($fs, small);
+            }
+            
+        }
+
+    }
+
+
+
+}
+
+.page-skills{
+    display: flex;
+    flex-flow: row nowrap;
+    width: 100%;
+    height: 100%;
+    .content-skill{
+        display: flex;
+        flex-direction: column;
+        margin: 50px;
+        width: 100%;
+        align-items: center;
+
+        border-radius: 20px;
+        background-color: rgb(241, 241, 241) ;
+        
+        .text-skill{
+            height: 100%;
+            display: flex;
+            text-align: center;
+            flex-direction: column;
+        }
+        svg{
+            height: 40%;
+            width: 40%;
+            fill:$customColor;
+        }
+        h3{
+            font-size: map-get($fs, normal);
+            margin:20px 0; ;
+        }
+        h4{
+            color: $customColor;
+            font-size: map-get($fs, normal);
+            margin:20px 0; ;
+        }
+        p{
+            font-size: map-get($fs, small );
+        }
+        // img{
+        //     width: 20%;
+        //     fill: aqua;
+        // }
+    }
+}
+
+.page-works{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.page-contact{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    background-color: $customColor1;
+    align-items: center;
+    justify-content: center;
+    h3{
+        font-size: map-get($fs, large );
+    }
+    p{
+        font-size: map-get($fs, normal );
+        margin: 20px 0;
+        text-align: center;
+    }
+    h6{
+        font-size: map-get($fs, small );
+    }
+    .content-contact{
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+        
+    } 
+}
+
+
+
+
+
+
+
+//Estilos para tablet
 @media only screen and (max-width : 1024px){
     .page-slide{
         background-color: burlywood;
+
+        .header-slide{
+            
+            
+            padding: 0 20px;
+            h3{
+                font-size: map-get($fs, small );
+            }
+            nav{
+                font-size: map-get($fs, x-small );
+            }
+        }
+        .content-title{
+            padding: 0 20px;
+            font-size: map-get($fs, normal );
+        }
+
+        .content-slide{
+            padding: 0 20px;
+            
+         p{
+             padding: 20px 0;
+             font-size: map-get($fs, x-small );
+         }
+        }  
+
     }
+    
 }
-// }
+
+
+//Estilos para celulares
+@media only screen and (max-width : 812px){
+    .page-slide{
+        background-color: paleturquoise;
+
+        .header-slide{
+            flex-direction: column;
+            padding: 10px 0;
+            h3{
+                font-size: map-get($fs, small );
+            }
+            nav{
+                font-size: map-get($fs, x-small );
+            }
+        }
+        .content-title{
+            font-size: map-get($fs, normal );
+        }
+
+        .content-slide{
+            
+         p{
+             padding: 20px 0;
+             font-size: map-get($fs, x-small );
+         }
+        }  
+
+    }
+    
+}
+
 
 
 // .item-box{

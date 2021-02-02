@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&family=Roboto+Slab:wght@400;700&family=Roboto:wght@400;500;900&display=swap');
+
+//para usarlas en css utilizo la siguiente sintaxis:
+// font-family: 'Roboto', sans-serif;
+// font-family: 'Roboto Mono', monospace;
+// font-family: 'Roboto Slab', serif
+
+//Si quiero llamar fuentes desde mis static files uso:
+
+// @font-face {
+// 	font-family: '<nombre de la fuente>';
+// 	src: url('<path de los archivos>');
+// 	font-style: normal | italic;
+// 	font-weight: thin | regular | bold | 400;
+// }
+
+
+$fs:(x-large:48px, large:30px, normal:24px, small:18px, x-small:14px );
+
